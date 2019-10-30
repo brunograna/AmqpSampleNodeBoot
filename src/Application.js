@@ -3,8 +3,8 @@ module.exports = {
         modules: {
             middlewares: "src/inbound/http/middlewares/**/*.js",
             controllers: "src/inbound/http/controllers/**/*.js",
-            outboundBrokers: "src/outbound/**/*.js",
-            inboundBrokers: "src/inbound/**/*.js",
+            outboundBrokers: "src/outbound/amqp/**/*.js",
+            inboundBrokers: "src/inbound/amqp/**/*.js",
         },
         application_path: "src/Application.js"
     },
@@ -14,7 +14,7 @@ module.exports = {
     amqp:{
         verbose: true,
         rabbitmq: {
-            connection_string: "amqp://guest:guest@localhost:5672",
+            connection_string: "amqp://user:pass@localhost:5672",
             bindings: [
                 {
                     exchange : {
