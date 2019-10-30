@@ -6,12 +6,11 @@ module.exports = {
             outboundBrokers: "src/outbound/amqp/**/*.js",
             inboundBrokers: "src/inbound/amqp/**/*.js",
         },
-        application_path: "src/Application.js"
     },
     server: {
         port: process.env.PORT || 9000
     },
-    amqp:{
+    amqp: {
         verbose: true,
         rabbitmq: {
             connection_string: "amqp://user:pass@localhost:5672",
