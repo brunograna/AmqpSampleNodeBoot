@@ -14,7 +14,7 @@ module.exports = {
     amqp:{
         verbose: true,
         rabbitmq: {
-            connection_string: "",
+            connection_string: "amqp://guest:guest@localhost:5672",
             bindings: [
                 {
                     exchange : {
