@@ -1,15 +1,11 @@
-
-
 module.exports = class AdapterSmsOnlineOutboundBroker {
 
     constructor({
                     logger,
-                    application,
-                    serviceBusAmqpProvider,
+                    rabbitMqAmqpProvider,
                 }){
         this.logger = logger;
-        this.application = application;
-        this.amqpProvider = serviceBusAmqpProvider;
+        this.amqpProvider = rabbitMqAmqpProvider;
     }
 
     async sendMessage(){
