@@ -1,12 +1,4 @@
 module.exports = {
-    node_boot: {
-        modules: {
-            middlewares: "src/inbound/http/middlewares/**/*.js",
-            controllers: "src/inbound/http/controllers/**/*.js",
-            outboundBrokers: "src/outbound/amqp/**/*.js",
-            inboundBrokers: "src/inbound/amqp/**/*.js",
-        },
-    },
     server: {
         port: process.env.PORT || 9000
     },

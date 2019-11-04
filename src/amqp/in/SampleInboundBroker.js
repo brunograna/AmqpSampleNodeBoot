@@ -1,4 +1,4 @@
-module.exports = class AdapterSmsOnlineInboundBroker {
+module.exports = class SampleInboundBroker {
 
     constructor({
                     logger,
@@ -27,7 +27,7 @@ module.exports = class AdapterSmsOnlineInboundBroker {
         logger.info("finishing subscribe from x-message-created");
     }
 
-    async listenForResults() {
+    async listen() {
         const {amqpProvider} = this;
 
         await amqpProvider.consumeExchangeByQueue([

@@ -19,9 +19,9 @@ module.exports = class HttpController {
                 response.json({
                     "status_code": 200,
                     "message": "Message published with success!!"
-                }).end()
+                }).end();
             } catch (error) {
-                next(error)
+                next(error);
             }
         }
     }

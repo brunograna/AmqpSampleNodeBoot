@@ -1,4 +1,4 @@
-module.exports = class AdapterSmsOnlineOutboundBroker {
+module.exports = class SampleOutboundBroker {
 
     constructor({
                     logger,
