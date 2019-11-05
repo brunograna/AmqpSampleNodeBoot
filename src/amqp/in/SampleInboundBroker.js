@@ -18,11 +18,11 @@ module.exports = class SampleInboundBroker {
 
             logger.info(`Payload: ${JSON.stringify(message)} \n Headers: ${JSON.stringify(headers)}`);
             //Acknowledge the message
-            channel.ack(payload);
+            await channel.ack(payload);
         }catch (e) {
             logger.error(e);
             //Not Acknowledge the message
-            channel.nack(payload);
+            await channel.nack(payload);
         }
         logger.info("finishing subscribe from x-message-created");
     }
